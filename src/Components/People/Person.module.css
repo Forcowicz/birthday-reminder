@@ -1,0 +1,28 @@
+.person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 2.6rem;
+
+  background-color: var(--color-white);
+}
+
+.person:nth-child(2n) {
+  background-color: #dcdcdc;
+}
+
+.person__name {
+  font-size: 2.2rem;
+}
+
+.person__date {
+  font-size: 1.8rem;
+  color: #848484;
+}
+
+.person__date--close {
+  color: var(--color-primary);
+}

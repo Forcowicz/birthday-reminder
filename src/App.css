@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --color-black: #152528;
+  --color-white: #f1f1f1;
+  --color-primary: #EF3054;
+  --color-secondary: #28502E;
+  --color-accent: #47682C;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+html {
+  width: 100vw;
   min-height: 100vh;
+
+  font-size: 62.5%;
+
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+
+  font-size: 1.6rem;
+  font-family: 'Anek Malayalam', sans-serif;
+  color: var(--color-black);
+
+  background-color: var(--color-black);
+
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100%;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 3rem;
+
+  width: 42rem;
+  height: 100%;
+
+  margin-top: 6rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }

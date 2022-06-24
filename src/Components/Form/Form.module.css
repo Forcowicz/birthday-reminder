@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  flex-flow: nowrap column;
+  gap: 2.6rem;
+
+  width: 100%;
+
+  padding: 3.2rem;
+
+  background-color: var(--color-white);
+}
+
+.form-control {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.form-control > input {
+  padding: .6rem;
+
+  color: inherit;
+}
+
+.form-control > input:focus {
+  outline: none;
+}
+
+.form-control > label {
+  font-size: 1.5rem;
+}
