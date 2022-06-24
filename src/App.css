@@ -23,8 +23,11 @@ body {
   width: 100%;
   min-height: 100%;
 
+  padding: 0;
+  margin: 0;
+
   font-size: 1.6rem;
-  font-family: 'Anek Malayalam', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--color-black);
 
   background-color: var(--color-black);
@@ -46,10 +49,16 @@ body {
   align-items: center;
   gap: 3rem;
 
-  width: 42rem;
+  width: 48rem;
   height: 100%;
 
-  margin-top: 6rem;
+  margin: 6rem 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+  }
 }
 
 ul {

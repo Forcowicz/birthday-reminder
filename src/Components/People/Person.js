@@ -5,6 +5,8 @@ const Person = function (props) {
     return (Math.round(new Date(`${new Date().getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`) - new Date()) / (1000 * 60 * 60 * 24));
   };
 
+  const calcAge = date => Math.floor(Math.abs(new Date() - date) / (1000 * 60 * 60 * 24 * 365));
+
   const formatDate = date => {
     return new Intl.DateTimeFormat("pl-PL", {
       day: "numeric",
@@ -19,7 +21,7 @@ const Person = function (props) {
   };
 
   return (<li className={styles.person} data-id={props.id} onClick={personClickHandler}>
-    <span className={styles.person__name}>{props.firstName} {props.lastName}</span>
+    <span className={styles.person__name}>{`${props.firstName} ${props.lastName} (${calcAge(new Date(props.date))})`}</span>
     <span className={`${styles.person__date} ${daysUntilBirthday <= 10 && daysUntilBirthday >= 0 ? styles["person__date--close"] : ""}`}>{formatDate(new Date(props.date))}</span>
   </li>);
 };

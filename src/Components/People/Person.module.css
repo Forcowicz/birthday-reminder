@@ -8,6 +8,13 @@
   padding: 2.6rem;
 
   background-color: var(--color-white);
+
+  cursor: pointer;
+  transition: all .15s ease-out;
+}
+
+.person:hover {
+  background-color: #fff !important;
 }
 
 .person:nth-child(2n) {
@@ -19,8 +26,11 @@
 }
 
 .person__date {
+  margin-left: 2.4rem;
+
   font-size: 1.8rem;
   color: #848484;
+  text-align: right;
 }
 
 .person__date--close {
