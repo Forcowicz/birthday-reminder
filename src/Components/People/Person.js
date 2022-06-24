@@ -14,7 +14,11 @@ const Person = function (props) {
 
   const daysUntilBirthday = calcDaysPassed(new Date(props.date));
 
-  return (<li className={styles.person}>
+  const personClickHandler = function (e) {
+    props.onRemovePerson(e.target.closest("li").dataset.id);
+  };
+
+  return (<li className={styles.person} data-id={props.id} onClick={personClickHandler}>
     <span className={styles.person__name}>{props.firstName} {props.lastName}</span>
     <span className={`${styles.person__date} ${daysUntilBirthday <= 10 && daysUntilBirthday >= 0 ? styles["person__date--close"] : ""}`}>{formatDate(new Date(props.date))}</span>
   </li>);
