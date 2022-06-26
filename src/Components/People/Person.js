@@ -20,9 +20,14 @@ const Person = function (props) {
     props.onRemovePerson(e.target.closest("li").dataset.id);
   };
 
+  let personDateClasses = `${styles.person__date} `;
+
+  if (daysUntilBirthday <= 10 && daysUntilBirthday > -1) personDateClasses += styles["person__date--close"];
+  if (daysUntilBirthday <= -1 && daysUntilBirthday > -11) personDateClasses += styles["person__date--missed"];
+
   return (<li className={styles.person} data-id={props.id} onClick={personClickHandler}>
     <span className={styles.person__name}>{`${props.firstName} ${props.lastName} (${calcAge(new Date(props.date))})`}</span>
-    <span className={`${styles.person__date} ${daysUntilBirthday <= 10 && daysUntilBirthday >= 0 ? styles["person__date--close"] : ""}`}>{formatDate(new Date(props.date))}</span>
+    <span className={personDateClasses}>{formatDate(new Date(props.date))}</span>
   </li>);
 };
 

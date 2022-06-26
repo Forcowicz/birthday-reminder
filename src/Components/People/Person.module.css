@@ -26,13 +26,26 @@
 }
 
 .person__date {
+  display: inline-block;
+
   margin-left: 2.4rem;
 
-  font-size: 1.8rem;
   color: #848484;
   text-align: right;
+
+  border-radius: 100vmax;
+}
+
+.person__date--close, .person__date--missed {
+  padding: .6rem 1.2rem;
+
+  color: var(--color-white);
 }
 
 .person__date--close {
-  color: var(--color-primary);
+  background-color: #ff6000;
+}
+
+.person__date--missed {
+  background-color: var(--color-primary);
 }
